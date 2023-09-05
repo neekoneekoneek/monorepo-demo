@@ -1,1 +1,1 @@
-export { default as loadMore } from "./load-more";
+export { default as loadMoreDirective } from "./load-more";

@@ -1,10 +1,11 @@
 <template>
   <el-select
-    v-model="value"
+    :value="value"
     v-select-load-more="isLazy ? loadMore : () => {}"
     class="select"
     v-bind="$attrs"
     :class="{ 'lazy-select-result': isLazy }"
+    @change="handleChange"
   >
     <el-option
       v-for="item in compOptions"
@@ -16,11 +17,11 @@
 </template>
 
 <script>
-import { loadMore } from "@demo/utils";
+import { loadMoreDirective } from "@demo/utils";
 export default {
   name: "DemoSelect",
   directives: {
-    "select-load-more": loadMore,
+    "select-load-more": loadMoreDirective,
   },
   props: {
     value: {
@@ -33,7 +34,7 @@ export default {
         return [];
       },
     },
-    config: {
+    optionConfig: {
       type: Object,
       default() {
         return {
@@ -50,18 +51,35 @@ export default {
       type: Function,
       default() {},
     },
+    defaultConfig: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
   },
   computed: {
     compOptions() {
       return this.options.map((item) => {
         if (!Object.prototype.hasOwnProperty.call(item, "label")) {
-          this.$set(item, "label", item[this.config.label]);
+          this.$set(item, "label", item[this.optionConfig.label]);
         }
         if (!Object.prototype.hasOwnProperty.call(item, "value")) {
-          this.$set(item, "value", item[this.config.value]);
+          this.$set(item, "value", item[this.optionConfig.value]);
         }
         return item;
       });
+    },
+  },
+  methods: {
+    handleChange(val) {
+      this.$emit("update:value", val);
+      if (
+        this.defaultConfig.onChange &&
+        this.defaultConfig.onChange instanceof Function
+      ) {
+        this.defaultConfig.onChange.call(this, val);
+      }
     },
   },
 };

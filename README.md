@@ -31,8 +31,8 @@
   No projects matched the filters in "E:\demo\monorepo-demo"
   ```
 
-  1. 原因：操作项目的workspace未在pnpm-workspace.yaml中声明
-  2. 解决：检查workspace是否存在
+  1. 原因：操作项目的workspace未在pnpm-workspace.yaml中声明，或者命令有问题
+  2. 解决：检查workspace是否存在或者检查命令是否有问题（例如将pnpm add -F... 写成了pnpm -F add...）
 
 - 暂未解决（注意其他使用vue@3.3.4的项目）
 
