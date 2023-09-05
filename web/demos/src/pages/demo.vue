@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    <m-select :value.sync="value" :options="options" :is-lazy="true"></m-select>
+    <m-select :value="value" :options="options"></m-select>
   </div>
 </template>
 
