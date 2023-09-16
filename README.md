@@ -37,6 +37,7 @@
 - npm publish 问题
   - 401：npm login 登陆一下
   - 402：@xx/xxx 的库默认发布私有库，npm publish --access public
+  - 403：注意当前的版本
   - 404：@xx/xxx 的库发布时需要确定有 xx 组织
 
 ## vite+vue2
