@@ -11,7 +11,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "lib": "pnpm publish"
+    "lib": "pnpm publish --access public"
   },
   "keywords": [],
   "author": "",
