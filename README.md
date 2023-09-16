@@ -34,14 +34,10 @@
   1. 原因：操作项目的 workspace 未在 pnpm-workspace.yaml 中声明，或者命令有问题
   2. 解决：检查 workspace 是否存在或者检查命令是否有问题（例如将 pnpm add -F... 写成了 pnpm -F add...）
 
-- 暂未解决（注意其他使用vue@3.3.4的项目）
-
-```text
-Vue packages version mismatch:
-
-- vue@3.3.4 (E:\demo\monorepo-demo\node_modules\.pnpm\vue@3.3.4\node_modules\vue\index.js)
-- vue-template-compiler@2.6.11 (E:\demo\monorepo-demo\node_modules\.pnpm\vue-template-compiler@2.6.11\node_modules\vue-template-compiler\package.json)
-```
+- npm publish 问题
+  - 401：npm login 登陆一下
+  - 402：@xx/xxx 的库默认发布私有库，npm publish --access public
+  - 404：@xx/xxx 的库发布时需要确定有 xx 组织
 
 ## vite+vue2
 

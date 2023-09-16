@@ -1,4 +1,4 @@
-# @demo/components
+# @yiq-demo/components
 
 ## 1.0.1
 
@@ -6,4 +6,4 @@
 
 - init
 - Updated dependencies
-  - @demo/utils@1.0.1
+  - @yiq-demo/utils@1.0.1

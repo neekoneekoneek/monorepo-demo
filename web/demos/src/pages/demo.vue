@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { MSelect } from "@demo/components";
+import { MSelect } from "@yiq-demo/components";
 export default {
   name: "Demo",
   components: {

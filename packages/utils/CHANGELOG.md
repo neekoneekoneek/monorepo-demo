@@ -1,4 +1,4 @@
-# @demo/utils
+# @yiq-demo/utils
 
 ## 1.0.1
 

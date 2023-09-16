@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { loadMoreDirective } from "@demo/utils";
+import { loadMoreDirective } from "@yiq-demo/utils";
 export default {
   name: "DemoSelect",
   directives: {

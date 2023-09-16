@@ -81,10 +81,7 @@ importers:
 
   packages/components:
     dependencies:
-      '@demo/components':
-        specifier: workspace:^
-        version: 'link:'
-      '@demo/utils':
+      '@yiq-demo/utils':
         specifier: workspace:^
         version: link:../utils
       element-ui:
@@ -98,7 +95,7 @@ importers:
 
   web/demos:
     dependencies:
-      '@demo/components':
+      '@yiq-demo/components':
         specifier: workspace:^
         version: link:../../packages/components
       element-ui:
