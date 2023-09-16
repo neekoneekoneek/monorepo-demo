@@ -79,3 +79,28 @@
 - 删除无效文件
 
 - 注意本项目 vue 的版本！！！！
+
+## nginx
+
+- 相关目录
+  ![Alt text](image-2.png)
+
+- 部署：把前端项目放到合适的地方
+  ![Alt text](image-3.png)
+
+- 配置：根据上一步的目录结构，配置 nginx.conf 文件
+  ![Alt text](image.png)
+
+- 部署的结果：根据 nginx.conf 访问对应的地址即可看到
+  ![Alt text](image-5.png)
+  ![Alt text](image-1.png)
+
+- 命令
+
+  ```text
+  nginx // 启动
+  nginx -s reload // 重新加载
+  nginx -s stop // 关闭
+  killall nginx // 关闭所有nginx进程
+  ps -ef | grep nginx // 查看启动情况
+  ```
