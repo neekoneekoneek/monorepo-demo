@@ -5,22 +5,32 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "pnpm run --filter @demo/demos dev"
+    "dev": "pnpm run --filter @demo/demos dev",
+    "build": "pnpm run --filter @demo/components build"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "autoprefixer": "^10.4.15",
     "babel-eslint": "^10.1.0",
     "babel-plugin-component": "^1.1.1",
     "commitizen": "^4.3.0",
+    "cssnano": "^6.0.1",
     "cz-customizable": "^7.0.0",
     "eslint": "6",
     "eslint-plugin-prettier": "3",
     "eslint-plugin-vue": "6",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
-    "prettier": "2"
+    "prettier": "2",
+    "rollup": "^3.29.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "rollup-plugin-vue": "^6.0.0"
   },
   "keywords": [],
   "author": "",
